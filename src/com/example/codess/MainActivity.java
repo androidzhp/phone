@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements OnClickListener{
 
 	private EditText et_number;
 
@@ -20,13 +20,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		et_number = (EditText) findViewById(R.id.editText1);
 		Button bt_call = (Button) findViewById(R.id.button1);
-		bt_call.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				callPhone();
-			}
-		});
+		bt_call.setOnClickListener(this);
 	}
 
 	private void callPhone() {
@@ -40,6 +34,11 @@ public class MainActivity extends Activity {
 		intent.setAction(Intent.ACTION_CALL);
 		intent.setData(Uri.parse("tel:" + number));
 		startActivity(intent);
+	}
+
+	@Override
+	public void onClick(View v) {
+		callPhone();
 	}
 
 }
