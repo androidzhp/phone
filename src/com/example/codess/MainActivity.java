@@ -24,20 +24,22 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				String number = et_number.getText().toString();
-				if ("".equals(number)) {
-					Toast.makeText(MainActivity.this, "号码不能为空", Toast.LENGTH_LONG).show();
-					return;
-				}
-
-				Intent intent = new Intent();
-				intent.setAction(Intent.ACTION_CALL);
-				intent.setData(Uri.parse("tel:" + number));
-				startActivity(intent);
-
+				callPhone();
 			}
-
 		});
+	}
+
+	private void callPhone() {
+		String number = et_number.getText().toString();
+		if ("".equals(number)) {
+			Toast.makeText(MainActivity.this, "号码不能为空", Toast.LENGTH_LONG).show();
+			return;
+		}
+
+		Intent intent = new Intent();
+		intent.setAction(Intent.ACTION_CALL);
+		intent.setData(Uri.parse("tel:" + number));
+		startActivity(intent);
 	}
 
 }
