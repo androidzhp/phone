@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="嘿嘿"
+            android:textColor="#00f"
+            android:textSize="18sp" 
+            android:layout_margin="10sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="哈哈"
+            android:textColor="#f00"
+            android:textSize="18sp" 
+            android:layout_margin="10sp" />
+                <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="呵呵"
+            android:textColor="#0f0"
+            android:textSize="18sp" 
+            android:layout_margin="10sp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="嘿嘿"
+            android:textColor="#00f"
+            android:textSize="18sp" 
+            android:layout_margin="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="哈哈"
+            android:textColor="#f00"
+            android:textSize="18sp" 
+            android:layout_margin="10sp" />
+    </TableRow>
+
+</TableLayout>
