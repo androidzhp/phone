@@ -19,8 +19,14 @@ public class MainActivity extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		et_number = (EditText) findViewById(R.id.editText1);
-		Button bt_call = (Button) findViewById(R.id.button1);
-		bt_call.setOnClickListener(this);
+		Button bt_call1 = (Button) findViewById(R.id.button1);
+		Button bt_call2 = (Button) findViewById(R.id.button2);
+		Button bt_call3 = (Button) findViewById(R.id.button3);
+		Button bt_call4 = (Button) findViewById(R.id.button4);
+		bt_call1.setOnClickListener(this);
+		bt_call2.setOnClickListener(this);
+		bt_call3.setOnClickListener(this);
+		bt_call4.setOnClickListener(this);
 	}
 
 	private void callPhone() {
@@ -30,6 +36,10 @@ public class MainActivity extends Activity implements OnClickListener {
 			return;
 		}
 
+		callPhone(number);
+	}
+
+	private void callPhone(String number) {
 		Intent intent = new Intent();
 		intent.setAction(Intent.ACTION_CALL);
 		intent.setData(Uri.parse("tel:" + number));
@@ -38,7 +48,22 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		callPhone();
+		switch (v.getId()) {
+		case R.id.button1:
+			callPhone();
+			break;
+		case R.id.button2:
+			callPhone("110");
+			break;
+		case R.id.button3:
+			callPhone("120");
+			break;
+		case R.id.button4:
+			callPhone("119");
+			break;
+		default:
+			break;
+		}
 	}
 
 }

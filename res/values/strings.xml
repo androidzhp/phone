@@ -3,6 +3,9 @@
 
     <string name="app_name">电话拨号器</string>
     <string name="hello_world">请输入电话号码!</string>
-    <string name="button">拨打</string>
+    <string name="button1">拨打</string>
+    <string name="button2">拨打110</string>
+    <string name="button3">拨打120</string>
+    <string name="button4">拨打119</string>
 
 </resources>
