@@ -20,25 +20,24 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		et_number = (EditText) findViewById(R.id.editText1);
 		Button bt_call = (Button) findViewById(R.id.button1);
-		bt_call.setOnClickListener(new MyClickListener());
-	}
+		bt_call.setOnClickListener(new OnClickListener() {
 
-	private class MyClickListener implements OnClickListener {
+			@Override
+			public void onClick(View v) {
+				String number = et_number.getText().toString();
+				if ("".equals(number)) {
+					Toast.makeText(MainActivity.this, "号码不能为空", Toast.LENGTH_LONG).show();
+					return;
+				}
 
-		@Override
-		public void onClick(View v) {
-			String number = et_number.getText().toString();
-			if ("".equals(number)) {
-				Toast.makeText(MainActivity.this, "号码不能为空", Toast.LENGTH_LONG).show();
-				return;
+				Intent intent = new Intent();
+				intent.setAction(Intent.ACTION_CALL);
+				intent.setData(Uri.parse("tel:" + number));
+				startActivity(intent);
+
 			}
 
-			Intent intent = new Intent();
-			intent.setAction(Intent.ACTION_CALL);
-			intent.setData(Uri.parse("tel:" + number));
-			startActivity(intent);
-		}
-
+		});
 	}
 
 }
