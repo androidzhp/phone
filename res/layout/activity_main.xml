@@ -53,4 +53,13 @@
         android:layout_toLeftOf="@+id/button2"
         android:text="@string/button4" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="41dp"
+        android:onClick="click"
+        android:text="@string/button1" />
+
 </RelativeLayout>

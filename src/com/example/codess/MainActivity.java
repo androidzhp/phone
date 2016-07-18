@@ -66,4 +66,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		}
 	}
 
+	public void click(View v) {
+		callPhone();
+	}
+
 }
